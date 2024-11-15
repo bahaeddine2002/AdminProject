@@ -14,5 +14,5 @@
        run: echo "Starting"
      - name: multiline script
        run: |
-       node -v
-       npm -v
+        node -v
+        npm -v
