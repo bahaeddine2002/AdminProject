@@ -2,16 +2,17 @@
  #workflow name
  #on: One or array of events
  on:
- push:
- branches:-dev
+   push:
+     branches:
+      - dev
  jobs:
- run-shell-command:
- #job name
- runs-on: ubuntu-latest
- #Runner OS
- steps:
- #Array of steps (object): name, run bash command-name: echo a string
- run: echo "Starting"-name: multiline script
- run: |
- node -v
- npm-v
+   run-shell-command: #job name
+     runs-on: ubuntu-latest #Runner OS
+   steps:
+ #Array of steps (object): name, run bash command
+     - name: echo a string
+       run: echo "Starting"
+     - name: multiline script
+       run: |
+       node -v
+       npm-v
